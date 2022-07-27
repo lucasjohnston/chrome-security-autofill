@@ -1,0 +1,44 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "es6": true,
+    "es2017": true,
+    "es2020": true,
+    "commonjs": true,
+    "node": true
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "airbnb-typescript/base",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "rules": {
+    "@typescript-eslint/semi": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "no-nested-ternary": 0,
+    "prettier/prettier": 2,
+    "import/no-unused-modules": 0,
+    "import/first": 0,
+    "consistent-return": 0,
+    "no-console": 0,
+    "max-classes-per-file": 0,
+    "no-await-in-loop": 0,
+    "implicit-arrow-linebreak": 0,
+    "semi": 0,
+    "prefer-default-export": 0,
+    "func-names": 1,
+    "quotes": 2,
+    "curly": 2,
+    "no-unused-vars": 0
+  }
+}

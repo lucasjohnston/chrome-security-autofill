@@ -1,0 +1,44 @@
+{
+  "name": "chrome-security-autofill",
+  "version": "1.0.0",
+  "description": "Building Safari's security code autofill for Chrome ✨",
+  "main": "index.js",
+  "repository": "git@github.com:lucasjohnston/chrome-security-autofill.git",
+  "author": "lucasjohnston <developing@lucasco.de>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "npx ts-node -r dotenv/config -r tsconfig-paths/register src/index.ts",
+    "dev": "export DEBUG=\"*\" && ts-node-dev -r dotenv/config -r tsconfig-paths/register --respawn src/index.ts",
+    "lint": "eslint **/*.ts -c .eslintrc.json",
+    "precommit": "lint-staged",
+    "build": "tsc -p ."
+  },
+  "dependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "tslib": "^2.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
